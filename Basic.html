@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div>
+        <input type="text" id="newString"/>
+        <button onClick="printString()">Confirm</button>
+        <button onclick="printVar()">Stored</button>        
+    </div>
+    <div>
+        <div id="newValue">Change value</div>
+        <button onClick="changeValue()">change</button>
+    </div>    
+    <script>
+        var newString = ""
+        function printString(){
+            newString = document.getElementById("newString").innerHTML
+            console.log("clicked")
+            console.log(newString)
+        }
+
+        function printVar(){
+            console.log(newString)
+
+        }
+
+        function changeValue(){
+            if(newString && newString !== null){
+                document.getElementById("newValue").innerHTML = newString
+            }
+        }
+    </script>
+</body>
+</html>
